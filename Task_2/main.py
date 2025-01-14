@@ -1,4 +1,4 @@
-from datetime import date, timedelta
+from datetime import date, timedelta, datetime
 from urllib import error
 
 from core.database import initial_db
@@ -27,4 +27,6 @@ def main():
 
 
 if __name__ == "__main__":
+    start = datetime.now()
     main()
+    print(f"Время загрузки данных - {datetime.now() - start}")
